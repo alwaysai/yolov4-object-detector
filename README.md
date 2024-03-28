@@ -1,2 +1,2 @@
-# yolov4 object detector
+# Yolov4 Object Detector
 Yolov4 ONNX Object Detector
