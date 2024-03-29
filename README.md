@@ -1,9 +1,9 @@
 # Yolov4 ONNX Object Detector
-This repo contains a YOLOv4 ONNX reference application script that switches seamlessly between CPU and GPU inferencing. The script uses a YOLOv4 ONNX model created from the coco dataset and can be found in alwaysAI's model catalog. Script is works with IP cameras.  To run simply add your ip camera's address as part of command line arguments when starting the application:
+This repo contains a YOLOv4 ONNX reference application script that switches seamlessly between CPU and GPU inferencing. The script uses a YOLOv4 ONNX model created from the coco dataset and can be found in alwaysAI's model catalog. Script works with IP cameras.  To run simply add your ip camera's address as part of command line arguments when starting the application:
 ```
 aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
-The script uses ether alwaysAI's ONNX runtime for CPU inferencing engine ```engine=edgeiq.Engine.ONNX_RT``` or TENSORRT runtime ```engine=edgeiq.Engine.TENSOR_RT``` for GPU inferencing.  The YOLOv4 architecture is computationally heavy so if your application requires realtime performance use TENSORRT engine if available.
+This script uses ether alwaysAI's ONNX runtime for CPU inferencing engine ```engine=edgeiq.Engine.ONNX_RT``` or TENSORRT runtime ```engine=edgeiq.Engine.TENSOR_RT``` for GPU inferencing.  Adjust the script in ```app.py``` to met your inferencing needs.  The YOLOv4 architecture is computationally heavy so if your application requires realtime performance use the TENSORRT engine.
 
 ## Requirements
 * [alwaysAI account](https://alwaysai.co/auth?register=true)
