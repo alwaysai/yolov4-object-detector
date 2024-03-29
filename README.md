@@ -24,9 +24,9 @@ To prepare the runtime environment and install app dependencies:
 aai app install
 ```
 
-To start the app:
+To start the app (customize to your camera url):
 ```
-aai app start
+aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
 
 To change the computer vision model, the engine and accelerator, and add additional dependencies read [this guide](https://alwaysai.co/docs/application_development/configuration_and_packaging.html).
