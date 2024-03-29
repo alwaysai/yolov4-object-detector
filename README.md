@@ -1,5 +1,5 @@
 # Yolov4 ONNX Object Detector
-YOLOv4 ONNX reference application that switches seamlessly between CPU and GPU. The script uses YOLOv4 ONNX Model created from the coco dataset and can be found in alwaysAI's model catalog.
+YOLOv4 ONNX reference application that switches seamlessly between CPU and GPU inferencing. The script uses YOLOv4 ONNX Model created from the coco dataset and can be found in alwaysAI's model catalog.
 Application is designed to work with IP cameras.  To run simply add your ip camera's address as part of command line arguments when starting the application:
 ```
 aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
