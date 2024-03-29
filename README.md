@@ -4,7 +4,7 @@ Application is designed to work with IP cameras.  To run simply add your ip came
 ```
 aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
-The script uses ether alwaysAI's ONNX runtime for CPU inferencing engine '(engine=edgeiq.Engine.ONNX_RT)' or TENSORRT runtime '(engine=edgeiq.Engine.TENSOR_RT)' for GPU inferencing.  The YOLOv4 architecture is computationally heavy so if your application requires realtime performance use TENSORRT engine if available.
+The script uses ether alwaysAI's ONNX runtime for CPU inferencing engine ```engine=edgeiq.Engine.ONNX_RT``` or TENSORRT runtime ```engine=edgeiq.Engine.TENSOR_RT``` for GPU inferencing.  The YOLOv4 architecture is computationally heavy so if your application requires realtime performance use TENSORRT engine if available.
 
 ## Requirements
 * [alwaysAI account](https://alwaysai.co/auth?register=true)
