@@ -5,7 +5,7 @@ aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
 This script uses either alwaysAI's ONNX runtime for CPU inferencing  ```engine=edgeiq.Engine.ONNX_RT``` or TENSORRT runtime ```engine=edgeiq.Engine.TENSOR_RT``` for GPU inferencing.  Adjust the script in ```app.py``` to met your inferencing needs.  The YOLOv4 architecture is computationally heavy so if your application requires realtime performance use the TENSORRT engine.
 
-### alwaysAI inference engine information 
+### alwaysAI inference engine information
 
 ## Requirements
 * [alwaysAI account](https://alwaysai.co/auth?register=true)
@@ -18,7 +18,10 @@ To perform initial configuration of the app:
 ```
 aai app configure
 ```
-
+Add model to the app:
+```
+aai app models add alwaysai/yolov4-onnx
+```
 To prepare the runtime environment and install app dependencies:
 ```
 aai app install
@@ -28,8 +31,15 @@ To start the app (customize to your camera url):
 ```
 aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
-
 To change the computer vision model, the engine and accelerator, and add additional dependencies read [this guide](https://alwaysai.co/docs/application_development/configuration_and_packaging.html).
+
+### x86 GTX x86 Usage Information
+alwaysAI also supports inferencing on GeForce 1650 GPU's for x86 devices.  To perform initial configuration of the app:
+```
+aai app configure --hardware x86-trt-23.02
+```
+Set ```ALWAYSAI_HW to x86-trt-23.02 in your Dockerfile```
+Then follow the Usage instructions starting with the ```aai add models``` command.
 
 ## Support
 * [Documentation](https://alwaysai.co/docs/)
