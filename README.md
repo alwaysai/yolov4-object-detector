@@ -33,7 +33,7 @@ aai app start -- --camera-url rtsp://acme:user@100.70.31.147/live
 ```
 To change the computer vision model, the engine and accelerator, and add additional dependencies read [this guide](https://alwaysai.co/docs/application_development/configuration_and_packaging.html).
 
-### x86 GTX x86 Usage Information
+### NIVIDA x86 GTX 1650 GPU Usage Information
 alwaysAI also supports inferencing on GeForce 1650 GPU's for x86 devices.  To perform initial configuration of the app:
 ```
 aai app configure --hardware x86-trt-23.02
